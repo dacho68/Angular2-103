@@ -12,6 +12,13 @@ I'm developping the Angular 2 samples along way I'm learning Angular 2. If you h
 ## ngIf vs [Hiden]
 ngIf will not generate the element if it's condition is *false*; You archive the same result by binding to the DOM *hidden* attribute on an element.
 
+**Syntax**
+``` html
+    - <div *ngIf="condition">...</div>
+    - <div template="ngIf condition">...</div>
+    - <template [ngIf]="condition"><div>...</div></template>
+```
+
 **Example:** using *ngIf
 ``` typescript
 @Component({
@@ -39,9 +46,83 @@ The false condition element is not exist the DOM as showing below.<br>
    directives:[],
 })
 ```
-The element is hidden but it's still in the DOM. <br>
+The element is hidden but it's still in the DOM.  Therefore Angular is still checked for change even it's hidden <br>
 
 ![ngIf](./images/hidden.jpg)
 
 
+## ngSwitch
+It allows to switch between elements
 
+**Example: ** ngSwitch
+``` typescript
+    @Component({
+        selector: 'example-ngswitch', 
+        template: 
+        `     <p>{{viewMode}}</p>
+            <ul class ="nav nav-pills">
+                <li [class.active]="viewMode =='map'"> <a (click)="viewMode = 'map'">Map View</a></li>
+                <li [class.active]="viewMode =='list'"><a (click)="viewMode = 'list'">List View</a></li>            
+            </ul>
+            <div [ngSwitch]="viewMode">
+                <template [ngSwitchWhen] = "'map'" ngSwitchDefault> Map View Content </template>
+                <template [ngSwitchWhen] = "'list'"> List View Content </template>
+            </div>
+    `,
+    directives:[],
+    })
+
+    export class ExampleNgSwitchComponent {
+    viewMode = 'map';
+    }
+```
+## ngFor
+
+**Syntax :**
+
+``` html
+    - <li *ngFor="let item of items; #i = index">...</li>
+    - <li template="ngFor #item of items; #i = index">...</li>
+    - <template ngFor #item [ngForOf]="items" #i="index"><li>...</li></template>
+```
+Note: # to indicate a local variable and the first index of an array is 0 (base 0)
+
+**Example: ** ngFor
+``` typescript
+    @Component({
+        selector: 'example-ngfor', 
+        template: `
+                <ul>
+                <li *ngFor="#course of courses, #i = index">
+                    {{i+1}} - {{course}}
+                </li>
+                </ul>         
+            `,
+    directives:[],
+    })
+
+    export class ExampleNgForComponent {
+    courses = ['Course 1', 'Course 2', 'Course 3'];
+    }
+```
+## Leading asterisk (*)
+
+The asterisk is the Angular syntax sugar that add the _template_ element automatically for us. here are the equivalent the above example that uses the ngFor 
+without the '*'
+
+``` typescript
+              <ul>
+                <template ngFor [ngForOf]="courses" #course #i=index>
+                <li> {{i+1}} - {{course}} </li>
+                </template>
+              </ul>  
+```
+
+## Pipes (|)
+Pipes is used for format data, such as
+    - Uppercase
+    - Lowercase
+    - Decimal
+    - Currency
+    - Date
+    - Json
