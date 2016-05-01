@@ -4,6 +4,8 @@ import {ExampleNgIfComponent} from './ngDirectives/example-ngif.component';
 import {ExampleHiddenComponent} from './ngDirectives/example-hidden.component'
 import {ExampleNgSwitchComponent} from './ngDirectives/example-ngswitch.component'
 import {ExampleNgForComponent} from './ngDirectives/example-ngfor.component'
+import {ExamplePipesComponent} from './ngDirectives/example-pipes.component'
+
 
 @Component({
     // element selector my-app
@@ -18,9 +20,11 @@ import {ExampleNgForComponent} from './ngDirectives/example-ngfor.component'
               <example-ngswitch></example-ngswitch>
               <h4>ngFor</h4>
               <example-ngfor></example-ngfor>
+              <h4>Pipes</h4>
+              <example-pipes></example-pipes>
               `,
     // including those components
-   directives:[ExampleNgIfComponent,ExampleHiddenComponent,ExampleNgSwitchComponent,ExampleNgForComponent]
+   directives:[ExampleNgIfComponent,ExampleHiddenComponent,ExampleNgSwitchComponent,ExampleNgForComponent,ExamplePipesComponent]
 })
 
 export class AppComponent {
