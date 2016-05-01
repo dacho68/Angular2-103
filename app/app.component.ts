@@ -7,6 +7,7 @@ import {ExampleNgForComponent} from './ngDirectives/example-ngfor.component'
 import {ExamplePipesComponent} from './ngDirectives/example-pipes.component'
 
 
+
 @Component({
     // element selector my-app
     selector: 'my-app',
@@ -23,8 +24,12 @@ import {ExamplePipesComponent} from './ngDirectives/example-pipes.component'
               <h4>Pipes</h4>
               <example-pipes></example-pipes>
               `,
+              
     // including those components
-   directives:[ExampleNgIfComponent,ExampleHiddenComponent,ExampleNgSwitchComponent,ExampleNgForComponent,ExamplePipesComponent]
+   directives:[ExampleNgIfComponent,ExampleHiddenComponent,
+              ExampleNgSwitchComponent,
+              ExampleNgForComponent,
+              ExamplePipesComponent]
 })
 
 export class AppComponent {
