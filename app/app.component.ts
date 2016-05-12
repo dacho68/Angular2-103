@@ -5,7 +5,7 @@ import {ExampleHiddenComponent} from './ngDirectives/example-hidden.component'
 import {ExampleNgSwitchComponent} from './ngDirectives/example-ngswitch.component'
 import {ExampleNgForComponent} from './ngDirectives/example-ngfor.component'
 import {ExamplePipesComponent} from './ngDirectives/example-pipes.component'
-
+import {ZippyComponent} from './exercises/zippy.component'
 
 
 @Component({
@@ -23,13 +23,18 @@ import {ExamplePipesComponent} from './ngDirectives/example-pipes.component'
               <example-ngfor></example-ngfor>
               <h4>Pipes</h4>
               <example-pipes></example-pipes>
+              <h4>Exercise 1:</h4>
+              <zippy title = "This is the title">
+                 Here is the content
+              </zippy>
               `,
               
     // including those components
    directives:[ExampleNgIfComponent,ExampleHiddenComponent,
               ExampleNgSwitchComponent,
               ExampleNgForComponent,
-              ExamplePipesComponent]
+              ExamplePipesComponent, 
+              ZippyComponent]
 })
 
 export class AppComponent {
