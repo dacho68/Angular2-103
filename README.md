@@ -126,3 +126,23 @@ Pipes is used for format data, such as
     - Currency
     - Date
     - Json
+    
+## Exercise 1 - Make an Accordion (Zippy) Component
+Make a voter component as you see below.
+![accordion](./images/accordion.jpg)
+
+
+Interface
+
+``` html5
+    <zippy title = "This is the title">
+        Here is the content
+    </zippy>     
+    
+Icon :
+
+glyphicon-chevron-down
+glyphicon-chevron-up 
+
+[ngClass]
+```
