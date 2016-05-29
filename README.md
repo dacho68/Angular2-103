@@ -7,6 +7,7 @@ I'm developping the Angular 2 samples along way I'm learning Angular 2. If you h
 - [101](https://github.com/dacho68/Angular2-101) - Property Binding, Class and Style Binding, Event Binding, Two way Binding.
 - [102](https://github.com/dacho68/Angular2-102) - Component API in depth, Input and Output properties.
 - 103 - Controlling Rendering of the HTML - ngId, ngSwitch, ngFor, Leading *, Pipes, ngClass, ngStyle, Elvis Operator, ng-content. 
+- [104](https://github.com/dacho68/Angular2-104) - Forms and Validations.
 
 
 ## ngIf vs [Hiden]
