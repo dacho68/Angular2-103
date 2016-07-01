@@ -149,3 +149,7 @@ glyphicon-chevron-up
 ```
 
 [Solution](https://github.com/dacho68/Angular2-103/blob/master/app/exercises/zippy.component.ts)
+
+## Output
+
+![Result](./images/results.jpg)
