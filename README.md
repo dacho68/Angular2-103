@@ -8,7 +8,7 @@ I'm developping the Angular 2 samples along way I'm learning Angular 2. If you h
 - [102](https://github.com/dacho68/Angular2-102) - Component API in depth, Input and Output properties.
 - 103 - Controlling Rendering of the HTML - ngId, ngSwitch, ngFor, Leading *, Pipes, ngClass, ngStyle, Elvis Operator, ng-content. 
 - [104](https://github.com/dacho68/Angular2-104) - Forms and Validations.
-
+- [Connectivity](https://github.com/dacho68/Angular2-Connectivity) - Connecting to the server.
 
 ## ngIf vs [Hiden]
 ngIf will not generate the element if it's condition is *false*; You archive the same result by binding to the DOM *hidden* attribute on an element.
